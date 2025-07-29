@@ -1,1 +1,290 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>你的姓名 - 个人主页</title>
+    <style>
+        :root {
+            --primary: #4a6fa5;
+            --secondary: #2e4a76;
+            --accent: #ff7e5f;
+            --light: #f8f9fa;
+            --dark: #343a40;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: var(--light);
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .subtitle {
+            font-size: 1.5rem;
+            opacity: 0.9;
+            font-weight: 300;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background: var(--accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            font-weight: 500;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        section {
+            padding: 5rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--secondary);
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: "";
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--accent);
+            margin: 0.5rem auto;
+        }
+        
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+        }
+        
+        .profile-img {
+            flex: 1;
+            border-radius: 50%;
+            max-width: 300px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        
+        .about-text {
+            flex: 2;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .skill-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .projects-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2.5rem;
+        }
+        
+        .project-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+        
+        .project-img {
+            height: 200px;
+            background: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .project-info {
+            padding: 1.5rem;
+        }
+        
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .contact-icon {
+            display: inline-block;
+            font-size: 2rem;
+            color: var(--secondary);
+            transition: transform 0.3s;
+        }
+        
+        .contact-icon:hover {
+            transform: translateY(-5px);
+            color: var(--accent);
+        }
+        
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+        
+        @media (max-width: 768px) {
+            .about-content {
+                flex-direction: column;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .subtitle {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 页头区域 -->
+    <header>
+        <div class="container">
+            <h1>你的姓名</h1>
+            <p class="subtitle">前端开发工程师 | UI设计师 | 技术博主</p>
+            <a href="#projects" class="btn">查看我的作品</a>
+        </div>
+    </header>
 
+    <!-- 关于我 -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">关于我</h2>
+            <div class="about-content">
+                <img src="https://via.placeholder.com/300" alt="个人照片" class="profile-img">
+                <div class="about-text">
+                    <p>你好！我是[你的名字]，一名充满激情的[你的职业]。[在这里添加2-3句简洁的个人介绍，突出你的专业领域和核心优势]。我热爱创造优雅、高效的解决方案，并通过代码实现创新想法。</p>
+                    <p style="margin-top: 1rem;">[添加更多个人背景信息，如教育经历、专业成就或个人理念]。我持续关注前端技术的最新发展，特别喜欢探索React生态和CSS创新技术。</p>
+                    <div class="contact-links">
+                        <a href="https://github.com/yourusername" target="_blank" class="contact-icon">GitHub</a>
+                        <a href="https://linkedin.com/in/yourusername" target="_blank" class="contact-icon">LinkedIn</a>
+                        <a href="mailto:youremail@example.com" class="contact-icon">Email</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 技能展示 -->
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title">专业技能</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>前端开发</h3>
+                    <p>HTML5/CSS3, JavaScript, React, Vue.js, TypeScript, 响应式设计</p>
+                </div>
+                <div class="skill-card">
+                    <h3>UI/UX设计</h3>
+                    <p>Figma, Adobe XD, 用户研究, 交互设计, 设计系统</p>
+                </div>
+                <div class="skill-card">
+                    <h3>开发工具</h3>
+                    <p>Git/GitHub, Webpack, npm/yarn, Jest, CI/CD</p>
+                </div>
+                <div class="skill-card">
+                    <h3>其他技能</h3>
+                    <p>Node.js, Python, 性能优化, 无障碍设计, 技术写作</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 项目展示 -->
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title">精选项目</h2>
+            <div class="projects-container">
+                <div class="project-card">
+                    <div class="project-img">项目预览图</div>
+                    <div class="project-info">
+                        <h3>项目名称一</h3>
+                        <p>项目简短描述，突出解决的问题和技术创新点。在这里用1-2句话描述项目亮点。</p>
+                        <a href="#" class="btn">查看详情</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img">项目预览图</div>
+                    <div class="project-info">
+                        <h3>项目名称二</h3>
+                        <p>项目简短描述，突出解决的问题和技术创新点。在这里用1-2句话描述项目亮点。</p>
+                        <a href="#" class="btn">查看详情</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img">项目预览图</div>
+                    <div class="project-info">
+                        <h3>项目名称三</h3>
+                        <p>项目简短描述，突出解决的问题和技术创新点。在这里用1-2句话描述项目亮点。</p>
+                        <a href="#" class="btn">查看详情</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 你的姓名. 保留所有权利</p>
+            <p>通过 GitHub Pages 托管</p>
+        </div>
+    </footer>
+</body>
+</html>
