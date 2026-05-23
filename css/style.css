@@ -178,6 +178,88 @@ ul, ol { list-style: none; }
   margin-bottom: 2.5rem;
 }
 
+/* 💻 方案 B: Console Block (控制台盒子) 核心样式 */
+.section__subtitle-console {
+  background: rgba(15, 23, 42, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-left: 3px solid var(--accent-emerald);
+  border-radius: 8px;
+  max-width: 620px;
+  margin: -1.5rem 0 2.5rem 0; /* 贴合上方大标题，与页面整体排版无缝对齐 */
+  padding: 12px 18px;
+  font-family: var(--font-mono);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: all 0.3s ease;
+}
+
+.section__subtitle-console:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+  border-left-color: var(--accent-emerald-light);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35), var(--glow-emerald);
+  transform: translateY(-2px);
+}
+
+.console-block__header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding-bottom: 8px;
+}
+
+.console-block__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+.console-block__dot.red { background: #EF4444; box-shadow: 0 0 4px rgba(239, 68, 68, 0.5); }
+.console-block__dot.yellow { background: #F59E0B; box-shadow: 0 0 4px rgba(245, 158, 11, 0.5); }
+.console-block__dot.green { background: #10B981; box-shadow: 0 0 4px rgba(16, 185, 129, 0.5); }
+
+.console-block__title {
+  font-size: 0.72rem;
+  color: var(--text-dim);
+  margin-left: 6px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.console-block__body {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.console-block__prompt {
+  color: var(--accent-emerald-light);
+  font-weight: bold;
+  margin-right: 2px;
+}
+
+.console-block__text {
+  color: var(--text-secondary);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.console-block__cursor {
+  display: inline-block;
+  width: 6px;
+  height: 14px;
+  background: var(--accent-emerald-light);
+  box-shadow: 0 0 8px var(--accent-emerald);
+  animation: blink-cursor 1s step-end infinite;
+  margin-left: 4px;
+  vertical-align: middle;
+}
+
 /* ═══════════════ NAVIGATION ═══════════════ */
 .nav {
   position: fixed;
