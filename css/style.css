@@ -18,6 +18,7 @@
   --accent-emerald-light: #34D399;
   --accent-amber: #F59E0B;
   --accent-red: #EF4444;
+  --accent-cyan: #06B6D4;
 
   --text-primary: #FFFFFF;
   --text-secondary: #E5E7EB;
@@ -50,12 +51,20 @@
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
 body {
   font-family: var(--font-body);
-  background: radial-gradient(ellipse at 50% 0%, var(--bg-secondary) 0%, var(--bg-primary) 70%);
   color: var(--text-secondary);
   line-height: 1.6;
   min-height: 100vh;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+  
+  /* 🗺️ 全局工程蓝图背景系统 (Layered background grids & radial gradient) */
+  background-color: var(--bg-primary);
+  background-image: 
+    linear-gradient(rgba(6, 182, 212, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(6, 182, 212, 0.035) 1px, transparent 1px),
+    radial-gradient(circle at 50% 35vw, #071020 0%, var(--bg-primary) 85%);
+  background-size: 40px 40px, 40px 40px, 100% 100%;
+  background-attachment: fixed, fixed, scroll;
 }
 img { max-width: 100%; height: auto; display: block; }
 a { color: inherit; text-decoration: none; }
@@ -405,13 +414,41 @@ ul, ol { list-style: none; }
   position: relative;
   overflow: hidden;
 }
-.hero__canvas {
+.hero {
+  background: transparent;
+}
+.blueprint-grid-layer {
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.3;
-  z-index: 0;
+  background-image: 
+    linear-gradient(rgba(6, 182, 212, 0.08) 1.5px, transparent 1.5px),
+    linear-gradient(90deg, rgba(6, 182, 212, 0.08) 1.5px, transparent 1.5px);
+  background-size: 40px 40px;
+  z-index: 1;
+}
+.blueprint-svg-container {
+  position: absolute;
+  top: -5%;
+  left: -5%;
+  width: 110%;
+  height: 110%;
+  z-index: 2;
+  opacity: 0.15;
+  transition: transform 0.25s cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: transform;
+}
+.blueprint-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 50%, transparent 30%, rgba(2, 4, 9, 0.95) 90%);
+  z-index: 3;
+  pointer-events: none;
 }
 .hero__content {
   position: relative;

@@ -1310,6 +1310,38 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   /* ═══════════════════════════════════════════════════════════
+   *  15. BLUEPRINT PARALLAX — 3D Parallax for Hero Blueprint Layer
+   * ═══════════════════════════════════════════════════════════ */
+
+  const initBlueprintParallax = () => {
+    const hero = $('#hero');
+    const blueprintLayer = $('#blueprint-layer');
+    if (!hero || !blueprintLayer) return;
+
+    let resizeTimer;
+    let windowWidth = window.innerWidth;
+    let windowHeight = window.innerHeight;
+
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => {
+        windowWidth = window.innerWidth;
+        windowHeight = window.innerHeight;
+      }, 200);
+    });
+
+    window.addEventListener('mousemove', (e) => {
+      const mouseX = (e.clientX - windowWidth / 2) / (windowWidth / 2);
+      const mouseY = (e.clientY - windowHeight / 2) / (windowHeight / 2);
+
+      const moveX = mouseX * -12;
+      const moveY = mouseY * -12;
+
+      blueprintLayer.style.transform = `translate3d(${moveX}px, ${moveY}px, 0) scale(1.03)`;
+    }, { passive: true });
+  };
+
+  /* ═══════════════════════════════════════════════════════════
    *  INITIALIZATION — Boot all modules
    * ═══════════════════════════════════════════════════════════ */
 
@@ -1329,6 +1361,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initRadarChart();
     initSmoothScroll();
     initMobileMenu();
+    initBlueprintParallax();
 
     // Log boot success
     console.log(
