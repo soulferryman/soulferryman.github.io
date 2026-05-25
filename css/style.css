@@ -428,6 +428,7 @@ ul, ol { list-style: none; }
     linear-gradient(90deg, rgba(6, 182, 212, 0.08) 1.5px, transparent 1.5px);
   background-size: 40px 40px;
   z-index: 1;
+  pointer-events: none;
 }
 .blueprint-svg-container {
   position: absolute;
@@ -439,6 +440,7 @@ ul, ol { list-style: none; }
   opacity: 0.15;
   transition: transform 0.25s cubic-bezier(0.25, 1, 0.5, 1);
   will-change: transform;
+  pointer-events: none;
 }
 .blueprint-overlay {
   position: absolute;
@@ -452,7 +454,7 @@ ul, ol { list-style: none; }
 }
 .hero__content {
   position: relative;
-  z-index: 1;
+  z-index: 5;
   text-align: center;
   max-width: 720px;
 }
@@ -569,7 +571,7 @@ ul, ol { list-style: none; }
   position: absolute;
   bottom: 8%;
   right: 5%;
-  z-index: 2;
+  z-index: 5;
 }
 .radio__body {
   background: var(--glass-bg);
@@ -1044,6 +1046,8 @@ ul, ol { list-style: none; }
   max-width: 800px;
   margin: 0 auto;
   position: relative;
+  overflow: visible;
+  padding-bottom: 6rem;
 }
 .workspace__item {
   background: var(--glass-bg);
