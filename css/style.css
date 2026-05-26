@@ -1047,7 +1047,6 @@ ul, ol { list-style: none; }
   margin: 0 auto;
   position: relative;
   overflow: visible;
-  padding-bottom: 6rem;
 }
 .workspace__item {
   background: var(--glass-bg);

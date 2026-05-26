@@ -948,11 +948,32 @@ document.addEventListener('DOMContentLoaded', () => {
       } else {
         const anchorRect = anchorEl.getBoundingClientRect();
         const parentRect = shelf.getBoundingClientRect();
+        const gap = 12; // px between anchor and popover
+
+        // Temporarily show popover offscreen to measure its height
         popoverEl.style.position = 'absolute';
-        popoverEl.style.left = `${anchorRect.left - parentRect.left + anchorRect.width / 2}px`;
-        popoverEl.style.top = `${anchorRect.top - parentRect.top + anchorRect.height + 12}px`;
-        popoverEl.style.transform = 'translateX(-50%)';
+        popoverEl.style.left = '-9999px';
+        popoverEl.style.top = '-9999px';
+        popoverEl.style.transform = 'none';
         popoverEl.style.marginTop = '0';
+        const popoverHeight = popoverEl.offsetHeight;
+
+        // Calculate space below the anchor within the viewport
+        const spaceBelow = window.innerHeight - anchorRect.bottom - gap;
+        const flipUp = spaceBelow < popoverHeight;
+
+        // Horizontal: center on the anchor
+        const leftPos = anchorRect.left - parentRect.left + anchorRect.width / 2;
+        popoverEl.style.left = `${leftPos}px`;
+        popoverEl.style.transform = 'translateX(-50%)';
+
+        if (flipUp) {
+          // Position above the anchor
+          popoverEl.style.top = `${anchorRect.top - parentRect.top - popoverHeight - gap}px`;
+        } else {
+          // Position below the anchor (default)
+          popoverEl.style.top = `${anchorRect.top - parentRect.top + anchorRect.height + gap}px`;
+        }
       }
       activeGearId = gear.id;
     }
