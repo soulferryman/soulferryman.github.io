@@ -1071,7 +1071,7 @@ ul, ol { list-style: none; }
   color: var(--text-primary);
 }
 .workspace__popover {
-  position: fixed;
+  position: absolute;
   background: rgba(30, 30, 60, 0.95);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);

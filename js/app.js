@@ -920,6 +920,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const initGearPopovers = () => {
     const popoverEl = $('#workspace-popover');
+    if (!popoverEl) return;
+    
+    // Portal the popover to the body to escape ALL clipping and stacking contexts
+    if (popoverEl.parentNode !== document.body) {
+      document.body.appendChild(popoverEl);
+    }
+    
     const popoverEmoji = $('#popover-emoji');
     const popoverName = $('#popover-name');
     const popoverDesc = $('#popover-desc');
@@ -927,56 +934,42 @@ document.addEventListener('DOMContentLoaded', () => {
     let activeGearId = null;
 
     function showPopover(gear, anchorEl) {
-      if (!popoverEl) return;
       popoverEmoji.textContent = gear.emoji;
       popoverName.textContent = gear.name;
       popoverDesc.textContent = gear.desc;
+      
+      // Unhide to measure dimensions
       popoverEl.hidden = false;
+      
+      const popoverHeight = popoverEl.offsetHeight;
+      const popoverWidth = popoverEl.offsetWidth;
+      const anchorRect = anchorEl.getBoundingClientRect();
+      const gap = 12;
 
-      // Position the popover near the clicked item
-      const shelf = anchorEl.closest('.workspace__shelf');
-      if (shelf) shelf.style.position = 'relative';
+      // Smart flip logic: check viewport space
+      const spaceBelow = window.innerHeight - anchorRect.bottom - gap;
+      const flipUp = spaceBelow < popoverHeight;
 
-      const isMobile = window.innerWidth < 768;
-      if (isMobile) {
-        // Center below the grid on mobile
-        popoverEl.style.position = 'relative';
-        popoverEl.style.left = 'auto';
-        popoverEl.style.top = 'auto';
-        popoverEl.style.transform = 'none';
-        popoverEl.style.marginTop = '1rem';
+      // Calculate absolute document coordinates
+      let absoluteTop;
+      if (flipUp) {
+        absoluteTop = anchorRect.top + window.scrollY - popoverHeight - gap;
       } else {
-        const anchorRect = anchorEl.getBoundingClientRect();
-        const gap = 12;
-
-        // Use fixed positioning — coordinates are relative to viewport
-        popoverEl.style.position = 'fixed';
-        popoverEl.style.marginTop = '0';
-
-        // Measure popover height offscreen first
-        popoverEl.style.left = '-9999px';
-        popoverEl.style.top = '-9999px';
-        popoverEl.style.transform = 'none';
-        const popoverHeight = popoverEl.offsetHeight;
-        const popoverWidth = popoverEl.offsetWidth;
-
-        // Smart flip: check if enough space below
-        const spaceBelow = window.innerHeight - anchorRect.bottom - gap;
-        const flipUp = spaceBelow < popoverHeight;
-
-        // Vertical position
-        if (flipUp) {
-          popoverEl.style.top = `${anchorRect.top - popoverHeight - gap}px`;
-        } else {
-          popoverEl.style.top = `${anchorRect.bottom + gap}px`;
-        }
-
-        // Horizontal: center on the anchor, clamp to viewport edges
-        let leftPos = anchorRect.left + anchorRect.width / 2 - popoverWidth / 2;
-        leftPos = Math.max(12, Math.min(leftPos, window.innerWidth - popoverWidth - 12));
-        popoverEl.style.left = `${leftPos}px`;
-        popoverEl.style.transform = 'none';
+        absoluteTop = anchorRect.bottom + window.scrollY + gap;
       }
+
+      let absoluteLeft = anchorRect.left + window.scrollX + (anchorRect.width / 2) - (popoverWidth / 2);
+      // Clamp horizontally to document width
+      const maxLeft = document.documentElement.clientWidth - popoverWidth - 12;
+      absoluteLeft = Math.max(12, Math.min(absoluteLeft, maxLeft));
+
+      // Apply coordinates
+      popoverEl.style.position = 'absolute';
+      popoverEl.style.top = `${absoluteTop}px`;
+      popoverEl.style.left = `${absoluteLeft}px`;
+      popoverEl.style.margin = '0';
+      popoverEl.style.transform = 'none';
+
       activeGearId = gear.id;
     }
 
@@ -1003,6 +996,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (popoverClose) popoverClose.addEventListener('click', hidePopover);
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape') hidePopover(); });
+    window.addEventListener('resize', hidePopover, { passive: true });
   };
 
   /* ═══════════════════════════════════════════════════════════
