@@ -947,33 +947,35 @@ document.addEventListener('DOMContentLoaded', () => {
         popoverEl.style.marginTop = '1rem';
       } else {
         const anchorRect = anchorEl.getBoundingClientRect();
-        const parentRect = shelf.getBoundingClientRect();
-        const gap = 12; // px between anchor and popover
+        const gap = 12;
 
-        // Temporarily show popover offscreen to measure its height
-        popoverEl.style.position = 'absolute';
+        // Use fixed positioning — coordinates are relative to viewport
+        popoverEl.style.position = 'fixed';
+        popoverEl.style.marginTop = '0';
+
+        // Measure popover height offscreen first
         popoverEl.style.left = '-9999px';
         popoverEl.style.top = '-9999px';
         popoverEl.style.transform = 'none';
-        popoverEl.style.marginTop = '0';
         const popoverHeight = popoverEl.offsetHeight;
+        const popoverWidth = popoverEl.offsetWidth;
 
-        // Calculate space below the anchor within the viewport
+        // Smart flip: check if enough space below
         const spaceBelow = window.innerHeight - anchorRect.bottom - gap;
         const flipUp = spaceBelow < popoverHeight;
 
-        // Horizontal: center on the anchor
-        const leftPos = anchorRect.left - parentRect.left + anchorRect.width / 2;
-        popoverEl.style.left = `${leftPos}px`;
-        popoverEl.style.transform = 'translateX(-50%)';
-
+        // Vertical position
         if (flipUp) {
-          // Position above the anchor
-          popoverEl.style.top = `${anchorRect.top - parentRect.top - popoverHeight - gap}px`;
+          popoverEl.style.top = `${anchorRect.top - popoverHeight - gap}px`;
         } else {
-          // Position below the anchor (default)
-          popoverEl.style.top = `${anchorRect.top - parentRect.top + anchorRect.height + gap}px`;
+          popoverEl.style.top = `${anchorRect.bottom + gap}px`;
         }
+
+        // Horizontal: center on the anchor, clamp to viewport edges
+        let leftPos = anchorRect.left + anchorRect.width / 2 - popoverWidth / 2;
+        leftPos = Math.max(12, Math.min(leftPos, window.innerWidth - popoverWidth - 12));
+        popoverEl.style.left = `${leftPos}px`;
+        popoverEl.style.transform = 'none';
       }
       activeGearId = gear.id;
     }
