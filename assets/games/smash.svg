@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="900" viewBox="0 0 600 900">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#382611"/>
+      <stop offset="1" stop-color="#211609"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.42" r="0.55">
+      <stop offset="0" stop-color="#ff8c42" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#ff8c42" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="600" height="900" fill="url(#bg)"/>
+  <rect width="600" height="900" fill="url(#glow)"/>
+  <g stroke="#ffffff" stroke-opacity="0.045">
+    <path d="M0 150H600M0 300H600M0 450H600M0 600H600M0 750H600"/>
+    <path d="M150 0V900M300 0V900M450 0V900"/>
+  </g>
+  <text x="300" y="560" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="560" fill="#ff8c42" fill-opacity="0.09">S</text>
+  <text x="48" y="84" font-family="Menlo, monospace" font-size="24" letter-spacing="4" fill="#ff8c42">NINTENDO SWITCH</text>
+  <rect x="48" y="104" width="88" height="4" rx="2" fill="#ff8c42"/>
+  <text x="48" y="420" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-weight="900" font-size="96" fill="#f2f6f9">任天堂明星</text>
+  <text x="48" y="538" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-weight="900" font-size="96" fill="#f2f6f9">大乱斗 SP</text>
+  <text x="48" y="596" font-family="Arial, sans-serif" font-weight="600" font-size="28" fill="#9fb0be" letter-spacing="1">Smash Bros. Ultimate</text>
+  <text x="48" y="820" font-family="Menlo, monospace" font-size="26" fill="#ff8c42">2018</text>
+  <text x="552" y="820" text-anchor="end" font-family="Menlo, monospace" font-size="26" fill="#5b6c7c">soulferryman.played</text>
+</svg>

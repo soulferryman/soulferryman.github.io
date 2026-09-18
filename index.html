@@ -3,205 +3,345 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>董建宇 Dong Jianyu | DevRel Lead · Open Source Ecosystem</title>
-  <meta name="description" content="董建宇 soulferryman 的个人主页。DevRel Lead、开源生态建设者，关注具身智能、AI 开发者关系与社区生态。">
-  <meta name="keywords" content="董建宇,Dong Jianyu,soulferryman,DevRel,开源,具身智能,AI,人形机器人,RoboMIND,TienKung">
-  <meta name="author" content="董建宇 Dong Jianyu">
-  <meta property="og:title" content="董建宇 Dong Jianyu | soulferryman">
-  <meta property="og:description" content="DevRel Lead · Open Source Ecosystem Builder · Embodied AI">
+  <title>董建宇 Dong Jianyu | Open Source · Developer Relations · Embodied AI</title>
+  <meta name="description" content="soulferryman（董建宇）的个人主页：开源生态与开发者关系负责人，专注具身智能开源社区、AI Agent 生态与开发者增长。">
+  <meta name="keywords" content="soulferryman,Dong Jianyu,DevRel,开源,Open Source,具身智能,Embodied AI,RoboMIND,TienKung,FlyFish,开发者关系">
+  <meta name="author" content="soulferryman">
+  <meta property="og:title" content="董建宇 Dong Jianyu | @soulferryman">
+  <meta property="og:description" content="Open Source Ecosystem · Developer Relations · Embodied AI">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://soulferryman.github.io">
   <meta property="og:image" content="https://avatars.githubusercontent.com/u/21328793?v=4">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="董建宇 Dong Jianyu | soulferryman">
-  <meta name="twitter:description" content="DevRel Lead · Open Source Ecosystem Builder · Embodied AI">
+  <meta name="twitter:title" content="董建宇 Dong Jianyu | @soulferryman">
+  <meta name="twitter:description" content="Open Source Ecosystem · Developer Relations · Embodied AI">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700;800&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%2304080d'/%3E%3Cpath d='M14 19h20l16 13-16 13H14l16-13z' fill='none' stroke='%2319f6a3' stroke-width='4' stroke-linejoin='round'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="css/style.css?v=3.0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230a0f16'/%3E%3Cpath d='M16 20h22l14 12-14 12H16l14-12z' fill='none' stroke='%232de3a7' stroke-width='4' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/style.css?v=4.1">
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
 </head>
 <body>
-  <div class="site-noise" aria-hidden="true"></div>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-glow" aria-hidden="true"></div>
+
   <header class="nav" id="nav">
-    <a class="brand" href="#top" aria-label="回到首页">
-      <span class="brand__mark">DJ</span>
-      <span class="brand__meta">soulferryman<span>github.io</span></span>
-    </a>
-    <div class="nav__status" aria-label="当前状态">
-      <span></span>
-      <strong>ONLINE</strong>
-      <em>ecosystem.build</em>
+    <div class="nav__inner">
+      <a class="brand" href="#top">
+        <span class="brand__mark">&gt;_</span>
+        <span class="brand__name">soulferryman<span class="brand__dot">.github.io</span></span>
+      </a>
+      <nav class="nav__links" id="navLinks" aria-label="主导航">
+        <a href="#about">关于</a>
+        <a href="#impact">数据</a>
+        <a href="#projects">开源项目</a>
+        <a href="#career">职业经历</a>
+        <a href="#player">玩家档案</a>
+        <a href="#contact">联系</a>
+      </nav>
+      <a class="nav__gh" href="https://github.com/soulferryman" target="_blank" rel="noopener noreferrer" aria-label="GitHub 主页">
+        <svg viewBox="0 0 16 16" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+        <span>GitHub</span>
+      </a>
+      <button class="nav__toggle" id="navToggle" aria-label="打开导航" aria-expanded="false">
+        <span></span><span></span>
+      </button>
     </div>
-    <button class="nav__toggle" id="navToggle" aria-label="打开导航" aria-expanded="false">
-      <span></span><span></span>
-    </button>
-    <nav class="nav__links" id="navLinks" aria-label="主导航">
-      <a href="#about">about</a>
-      <a href="#projects">repos</a>
-      <a href="#timeline">timeline</a>
-      <a href="#arsenal">arsenal</a>
-      <a href="#contact">contact</a>
-    </nav>
   </header>
 
   <main id="top">
+    <!-- ======================= HERO ======================= -->
     <section class="hero section">
       <div class="hero__grid">
         <div class="hero__copy">
-          <p class="terminal-label">~/profile/init</p>
-          <h1>董建宇<br><span>Dong Jianyu</span></h1>
-          <p class="hero__line">
+          <p class="tag mono"><span class="dot"></span>~/soulferryman $ whoami</p>
+          <h1>董建宇<span class="hero__en">Dong Jianyu</span></h1>
+          <p class="hero__line mono">
             <span class="prompt">&gt;</span>
-            <span id="typingText">DevRel Lead</span>
+            <span id="typingText">开源与开发者关系负责人</span>
             <span class="cursor" aria-hidden="true"></span>
           </p>
-          <p class="hero__lede">懂技术底色，重一线执行。为大模型、具身智能与开源社区搭建可持续运转的开发者生态基础设施。</p>
+          <p class="hero__lede">
+            9 年开发者生态、开源增长与商业化经验，覆盖技术社区、B 端 SaaS、AI Agent 与具身智能。
+            擅长把数据集、工具链和社区机制组织成可持续增长的开源生态，让前沿技术真正抵达开发者。
+          </p>
           <div class="hero__actions">
             <a class="btn btn--primary" href="https://github.com/soulferryman" target="_blank" rel="noopener noreferrer">GitHub Profile</a>
-            <a class="btn btn--ghost" href="mailto:dongjianyu1994@outlook.com">Transmit Email</a>
+            <a class="btn btn--ghost" href="#projects">开源项目 ↓</a>
           </div>
         </div>
 
         <aside class="console" aria-label="个人状态面板">
-          <div class="window-bar">
-            <span></span><span></span><span></span>
-            <code>identity.packet</code>
-          </div>
-          <div class="profile-chip">
-            <img src="https://avatars.githubusercontent.com/u/21328793?v=4" alt="董建宇 GitHub 头像" width="92" height="92">
-            <div>
-              <strong>@soulferryman</strong>
-              <span>DevRel Lead / Open Source Operator</span>
+          <div class="console__bar mono"><span></span><span></span><span></span><code>profile.yaml</code></div>
+          <div class="console__body">
+            <div class="profile-chip">
+              <img src="https://avatars.githubusercontent.com/u/21328793?v=4" alt="GitHub 头像" width="72" height="72" loading="lazy">
+              <div>
+                <strong class="mono">@soulferryman</strong>
+                <span>Open Source &amp; DevRel</span>
+              </div>
             </div>
-          </div>
-          <dl class="signal-list">
-            <div><dt>focus</dt><dd>Embodied AI Ecosystem</dd></div>
-            <div><dt>mode</dt><dd>Developer Relations</dd></div>
-            <div><dt>stack</dt><dd>AI · Open Source · Community Ops</dd></div>
-            <div><dt>location</dt><dd>Beijing / Remote</dd></div>
-          </dl>
-          <div class="terminal-card">
-            <code>$ whoami --brief</code>
-            <p>把复杂技术翻译成开发者愿意使用、愿意贡献、愿意传播的系统。</p>
+            <dl class="kv mono">
+              <div><dt>focus</dt><dd>Embodied AI Ecosystem</dd></div>
+              <div><dt>mode</dt><dd>Developer Relations</dd></div>
+              <div><dt>stack</dt><dd>Python · GitHub Actions</dd></div>
+              <div><dt>base</dt><dd>Beijing / Remote</dd></div>
+            </dl>
+            <div class="console__note">
+              <code class="mono">$ cat motto.txt</code>
+              <p>把复杂技术翻译成开发者愿意使用、愿意贡献、愿意传播的系统。</p>
+            </div>
           </div>
         </aside>
       </div>
 
-      <div class="hero__ticker" aria-label="关键指标">
-        <span>9+ years DevRel</span>
-        <span>600W+ AI asset distribution</span>
-        <span>2000+ FlyFish stars</span>
-        <span>RoboMIND / TienKung / Open Source</span>
+      <div class="ticker mono" aria-label="关键指标">
+        <span>9+ years DevRel</span><i>/</i>
+        <span>RoboMIND 20M+ downloads</span><i>/</i>
+        <span>FlyFish 2000+ stars</span><i>/</i>
+        <span>5000+ developers onboarded</span><i>/</i>
+        <span>100+ hackathon teams</span>
       </div>
     </section>
 
-    <section class="section about" id="about">
+    <!-- ======================= ABOUT ======================= -->
+    <section class="section" id="about">
       <div class="section-head reveal">
-        <p class="terminal-label">/etc/about.md</p>
+        <p class="tag mono">/etc/about.md</p>
         <h2>技术、社区和真实世界之间的接口</h2>
       </div>
-      <div class="about__layout">
-        <article class="prose-panel reveal">
-          <p>我长期工作在开发者关系、开源治理和生态运营的交界处：理解产品和技术的真实复杂度，也理解开发者为什么愿意投入时间。</p>
-          <p>当前关注具身智能和 AI 基础设施，尤其是如何把数据集、工具链、社区机制和产业协作组织成一个能自增长的生态系统。</p>
-        </article>
-        <div class="metric-grid reveal" aria-label="能力指标">
-          <div class="metric"><span>DevRel</span><strong>90</strong><i style="--value:90%"></i></div>
-          <div class="metric"><span>开源治理</span><strong>92</strong><i style="--value:92%"></i></div>
-          <div class="metric"><span>内容运营</span><strong>88</strong><i style="--value:88%"></i></div>
-          <div class="metric"><span>技术理解</span><strong>80</strong><i style="--value:80%"></i></div>
+      <div class="about__grid">
+        <div class="about__text reveal">
+          <p>我长期工作在开发者关系、开源生态和商业化的交界处：既理解产品和技术的真实复杂度，也理解开发者为什么愿意投入时间。过去 9 年，我连续在技术社区、B 端 SaaS、AI Agent 与具身智能领域，完成了多次开发者产品与开源社区从 0 到 1 的搭建。</p>
+          <p>当前在北京人形机器人创新中心负责开源生态，关注具身智能开源项目如何从发布走向行业采用——以及如何用社区机制、赛事体系和自动化运营，让生态实现自增长。</p>
+        </div>
+        <div class="chips reveal" aria-label="核心能力">
+          <p class="chips__label mono">core.skills</p>
+          <ul>
+            <li>开源生态战略</li>
+            <li>开发者产品 0→1</li>
+            <li>开发者增长</li>
+            <li>开源商业化</li>
+            <li>Contributor 与伙伴生态</li>
+            <li>AI Agent 生态运营</li>
+            <li>Python / GitHub Actions</li>
+            <li>赛事与黑客松策划</li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <section class="section projects" id="projects">
+    <!-- ======================= IMPACT ======================= -->
+    <section class="section" id="impact">
       <div class="section-head reveal">
-        <p class="terminal-label">/var/repos</p>
-        <h2>开源生态节点</h2>
+        <p class="tag mono">/var/metrics</p>
+        <h2>一些可以被量化的结果</h2>
+      </div>
+      <div class="metric-grid">
+        <div class="metric reveal"><strong>9<i>+</i></strong><span>年开发者生态与开源运营经验</span></div>
+        <div class="metric reveal"><strong>2000<i>万+</i></strong><span>RoboMIND 数据集全球累计下载</span></div>
+        <div class="metric reveal"><strong>2000<i>+</i></strong><span>FlyFish GitHub / Gitee Stars</span></div>
+        <div class="metric reveal"><strong>5000<i>+</i></strong><span>百度 Agent Builder 新增开发者</span></div>
+        <div class="metric reveal"><strong>4000<i>+</i></strong><span>私域开发者沉淀与分层运营</span></div>
+        <div class="metric reveal"><strong>100<i>+</i></strong><span>全球具身智能黑客松报名队伍</span></div>
+      </div>
+    </section>
+
+    <!-- ======================= PROJECTS ======================= -->
+    <section class="section" id="projects">
+      <div class="section-head reveal">
+        <p class="tag mono">/var/repos --open-source</p>
+        <h2>主导与运营的开源项目</h2>
       </div>
       <div class="filter-bar reveal" role="tablist" aria-label="项目筛选">
-        <button class="filter active" data-filter="all" role="tab" aria-selected="true">all</button>
-        <button class="filter" data-filter="ai" role="tab" aria-selected="false">embodied-ai</button>
-        <button class="filter" data-filter="ops" role="tab" aria-selected="false">devrel-ops</button>
-        <button class="filter" data-filter="tool" role="tab" aria-selected="false">tooling</button>
+        <button class="filter active mono" data-filter="all" role="tab" aria-selected="true">all</button>
+        <button class="filter mono" data-filter="dataset" role="tab" aria-selected="false">dataset</button>
+        <button class="filter mono" data-filter="model" role="tab" aria-selected="false">model</button>
+        <button class="filter mono" data-filter="platform" role="tab" aria-selected="false">platform</button>
       </div>
       <div class="project-grid">
-        <article class="project-card reveal" data-category="ai">
-          <div class="project-card__top"><code>dataset.open</code><span>active</span></div>
+        <a class="project-card reveal" data-category="dataset" href="https://x-humanoid-robomind.github.io/" target="_blank" rel="noopener noreferrer">
+          <div class="project-card__top mono"><code>robomind.dataset</code><span>20M+ downloads</span></div>
           <h3>RoboMIND</h3>
-          <p>围绕真实轨迹数据集、文档、社区反馈和开发者分发建立开源协作路径。</p>
-          <ul><li>600W+ assets distributed</li><li>research / developer bridge</li></ul>
-        </article>
-        <article class="project-card reveal" data-category="ai">
-          <div class="project-card__top"><code>robot.system</code><span>field</span></div>
-          <h3>TienKung</h3>
-          <p>面向人形机器人二次开发与外部生态协同，把硬件进展转化为开发者可参与的界面。</p>
-          <ul><li>embodied intelligence</li><li>real-world operations</li></ul>
-        </article>
-        <article class="project-card reveal" data-category="ops">
-          <div class="project-card__top"><code>community.growth</code><span>scaled</span></div>
+          <p>覆盖 107k 条真实操作轨迹、479 种任务、96 类物体的具身智能数据集，全球累计下载超 2000 万次。</p>
+          <ul class="mono"><li>OS2ATC 最佳开源智能突破奖</li><li>信通院 OSCAR 典型案例 · EAI-100 十大数据集</li></ul>
+        </a>
+        <a class="project-card reveal" data-category="model" href="https://github.com/Open-X-Humanoid/TienKung-Lab" target="_blank" rel="noopener noreferrer">
+          <div class="project-card__top mono"><code>tienkung.lab</code><span>field-proven</span></div>
+          <h3>TienKung-Lab</h3>
+          <p>面向全尺寸人形机器人的强化学习运控框架，被多所高校与机器人企业采用并二次开发。</p>
+          <ul class="mono"><li>亦庄半程马拉松 · 世界机器人运动会</li><li>RL locomotion / AMP rewards</li></ul>
+        </a>
+        <a class="project-card reveal" data-category="model" href="https://huggingface.co/collections/X-Humanoid/wow" target="_blank" rel="noopener noreferrer">
+          <div class="project-card__top mono"><code>wow.worldmodel</code><span>14B params</span></div>
+          <h3>WoW 世界模型</h3>
+          <p>基于 200 万真实机器人交互轨迹训练的 14B 参数生成式世界模型，实现物理一致的想象、推理与行动。</p>
+          <ul class="mono"><li>World-Omniscient World Model</li><li>open weights on Hugging Face</li></ul>
+        </a>
+        <a class="project-card reveal" data-category="model" href="https://huggingface.co/collections/X-Humanoid/xr-1" target="_blank" rel="noopener noreferrer">
+          <div class="project-card__top mono"><code>xr-1.vla</code><span>national standard</span></div>
+          <h3>XR-1 VLA 模型</h3>
+          <p>国内首个通过具身智能国标测试的模型，以多模态视觉-动作统一表征打通"感知"与"执行"。</p>
+          <ul class="mono"><li>vision-action unified representation</li><li>see → act, autonomously</li></ul>
+        </a>
+        <a class="project-card reveal" data-category="model" href="https://huggingface.co/collections/X-Humanoid/pelican-vl-10" target="_blank" rel="noopener noreferrer">
+          <div class="project-card__top mono"><code>pelican-vl.brain</code><span>largest open</span></div>
+          <h3>Pelican-VL 1.0</h3>
+          <p>当前最大规模的开源具身多模态"大脑"模型，深度融合数据动力与自适应学习机制。</p>
+          <ul class="mono"><li>embodied multimodal brain</li><li>open-source release</li></ul>
+        </a>
+        <a class="project-card reveal" data-category="platform" href="https://github.com/CloudWise-OpenSource/FlyFish" target="_blank" rel="noopener noreferrer">
+          <div class="project-card__top mono"><code>flyfish.platform</code><span>¥1M+ pipeline</span></div>
           <h3>FlyFish</h3>
-          <p>从开源项目到开发者社区增长，通过内容、issue 机制和贡献者运营构建增长闭环。</p>
-          <ul><li>2000+ GitHub stars</li><li>open source governance</li></ul>
-        </article>
-        <article class="project-card reveal" data-category="tool">
-          <div class="project-card__top"><code>workflow.local</code><span>daily</span></div>
-          <h3>Vibe Coding</h3>
-          <p>用 AI 编程工具加速初稿生成，把人类审美、判断力和工程复核放在更高杠杆的位置。</p>
-          <ul><li>Cursor / Claude / Codex</li><li>review-first workflow</li></ul>
-        </article>
+          <p>从 0 到 1 孵化的低代码数据可视化平台：GitHub / Gitee 2000+ Star、10000+ Demo 用户，并跑通社区到百万级商单的转化链路。</p>
+          <ul class="mono"><li>Gitee 最有价值开源项目</li><li>中国开源云联盟优秀开源项目奖</li></ul>
+        </a>
       </div>
     </section>
 
-    <section class="section timeline" id="timeline">
+    <!-- ======================= CAREER ======================= -->
+    <section class="section" id="career">
       <div class="section-head reveal">
-        <p class="terminal-label">git log --career --oneline</p>
-        <h2>职业轨迹</h2>
+        <p class="tag mono">$ git log --career --oneline</p>
+        <h2>职业经历</h2>
       </div>
-      <div class="timeline__list">
-        <article class="timeline__item reveal">
-          <time>Now</time>
-          <div><h3>北京人形机器人创新中心</h3><p>开源负责人。推进具身智能数据、工具和社区协作，让机器人技术进入更开放的开发者循环。</p></div>
-        </article>
-        <article class="timeline__item reveal">
-          <time>Scale</time>
-          <div><h3>AI / DevRel / 商业化闭环</h3><p>从产品理解、开发者内容、社区活动到转化路径，构建可复用的生态运营系统。</p></div>
-        </article>
-        <article class="timeline__item reveal">
-          <time>Base</time>
-          <div><h3>开源社区与技术传播</h3><p>长期面向开发者写作、演示、答疑、治理 issue，并把一线反馈反哺产品和研发。</p></div>
-        </article>
-      </div>
+      <ol class="timeline">
+        <li class="timeline__item reveal">
+          <div class="timeline__meta mono"><time>2025.01 → now</time><span>Beijing</span></div>
+          <div class="timeline__body">
+            <h3>北京人形机器人创新中心 <em>开源与开发者关系负责人</em></h3>
+            <p>统筹开源生态战略、开发者产品与行业落地，从 0 到 1 搭建具身智能开源社区。</p>
+            <ul>
+              <li>围绕 RoboMIND、XR-1、WoW、TienKung-Lab 等项目，搭建 GitHub / Hugging Face / ModelScope 开源矩阵与数据运营体系，构建内容、技术支持与 Contributor 机制。</li>
+              <li>用 Python + GitHub Actions 实现核心指标自动采集与周期复盘，沉淀并分层运营 4000+ 私域开发者。</li>
+              <li>从 0 到 1 设计开发者比赛系统并上线；策划全球具身智能黑客松，吸引 100+ 支队伍报名。</li>
+              <li>推动北京人形获评 2025 年首批开源先锋企业，RoboMIND 等项目获 OS2ATC、LeadeRobot 等多项奖项。</li>
+            </ul>
+          </div>
+        </li>
+        <li class="timeline__item reveal">
+          <div class="timeline__meta mono"><time>2023.11 → 2024.03</time><span>Beijing</span></div>
+          <div class="timeline__body">
+            <h3>百度 <em>产品运营经理 · Agent 生态</em></h3>
+            <p>负责文心智能体平台 Agent Builder 冷启动期开发者增长。</p>
+            <ul>
+              <li>基于转化漏斗设计内容、渠道与运营策略，推动 5000+ 开发者入驻，平台整体转化率提升 5%。</li>
+              <li>从 0 到 1 搭建开发者教育与专家体系：11 门核心课程、4 个 Plugin 最佳实践、首批社区专家团。</li>
+            </ul>
+          </div>
+        </li>
+        <li class="timeline__item reveal">
+          <div class="timeline__meta mono"><time>2021.09 → 2023.07</time><span>Beijing</span></div>
+          <div class="timeline__body">
+            <h3>云智慧 <em>开源运营经理</em></h3>
+            <p>带领团队从 0 到 1 孵化开源项目 FlyFish，并建立开源到商业的转化链路。</p>
+            <ul>
+              <li>FlyFish 在 GitHub / Gitee 累计 2000+ Star、10000+ Demo 注册用户；沉淀 100+ 有效线索，带来百万级商单转化。</li>
+              <li>推动监控宝被 CNCF Landscape 收录；联合信通院参与低代码开发平台行业标准制定。</li>
+            </ul>
+          </div>
+        </li>
+        <li class="timeline__item reveal">
+          <div class="timeline__meta mono"><time>2019.08 → 2021.08</time><span>Beijing</span></div>
+          <div class="timeline__body">
+            <h3>开课吧 <em>高级师资运营经理</em></h3>
+            <ul>
+              <li>从 0 到 1 建设技术专家与内容产品体系，签约 100+ 资深架构师与技术专家；单系列公开课覆盖 40000+ 开发者。</li>
+            </ul>
+          </div>
+        </li>
+        <li class="timeline__item reveal">
+          <div class="timeline__meta mono"><time>2018.11 → 2019.06</time><span>Beijing</span></div>
+          <div class="timeline__body">
+            <h3>虎嗅 <em>用户运营</em></h3>
+            <ul>
+              <li>从 0 到 1 运营科技企业家付费社群，通过技术沙龙与企业参访完成 80+ 科技高管及创业者的付费转化。</li>
+            </ul>
+          </div>
+        </li>
+        <li class="timeline__item reveal">
+          <div class="timeline__meta mono"><time>2017.10 → 2018.08</time><span>Beijing</span></div>
+          <div class="timeline__body">
+            <h3>极客邦科技（InfoQ） <em>开发者运营</em></h3>
+            <ul>
+              <li>负责前沿技术课程分发与开发者增长：拓展 10+ 垂直渠道，单场直播在线峰值 2000+；建立 200+ 技术讲师资源池，支持十余场 Workshop 落地。</li>
+            </ul>
+          </div>
+        </li>
+      </ol>
     </section>
 
-    <section class="section arsenal" id="arsenal">
+    <!-- ======================= PLAYER PROFILE ======================= -->
+    <section class="section" id="player">
       <div class="section-head reveal">
-        <p class="terminal-label">~/arsenal/list</p>
-        <h2>装备库与兴趣栈</h2>
+        <p class="tag mono">~/player/loadout.json</p>
+        <h2>玩家档案 <span class="section-head__en">Player Profile</span></h2>
       </div>
-      <div class="arsenal__grid">
-        <article class="arsenal-card reveal"><code>input.device</code><h3>HHKB / Mechanical Writing</h3><p>键盘是节奏设备。写代码、写文档、写社区叙事，都需要稳定的反馈回路。</p></article>
-        <article class="arsenal-card reveal"><code>visual.memory</code><h3>Leica / Film Camera</h3><p>取景和对焦训练信息筛选能力：什么该进入画面，什么应该被坚决排除。</p></article>
-        <article class="arsenal-card reveal"><code>game.design</code><h3>Nintendo / Soulslike</h3><p>游戏设计提供另一种产品方法论：清晰规则、强反馈、有限系统里的无限可能。</p></article>
+      <div class="player__intro reveal">
+        <p>重度游戏玩家。欣赏任天堂的设计哲学——清晰的规则、即时的反馈、有限系统里的无限可能；游戏之外，也把它当作一种产品方法论来研究。</p>
+        <ul class="player__tags mono">
+          <li># Soulslike</li>
+          <li># 开放世界</li>
+          <li># Nintendo</li>
+          <li># 竞速模拟</li>
+          <li># 策略</li>
+        </ul>
+      </div>
+      <ul class="games reveal">
+        <li><img src="assets/games/wukong.jpg" alt="黑神话：悟空 封面" loading="lazy"><span>黑神话：悟空</span></li>
+        <li><img src="assets/games/elden-ring.jpg" alt="Elden Ring 封面" loading="lazy"><span>Elden Ring</span></li>
+        <li><img src="assets/games/sekiro.jpg" alt="Sekiro 封面" loading="lazy"><span>Sekiro</span></li>
+        <li><img src="assets/games/botw.svg" alt="塞尔达传说 旷野之息 封面" loading="lazy"><span>旷野之息</span></li>
+        <li><img src="assets/games/totk.svg" alt="塞尔达传说 王国之泪 封面" loading="lazy"><span>王国之泪</span></li>
+        <li><img src="assets/games/rdr2.jpg" alt="荒野大镖客 2 封面" loading="lazy"><span>RDR2</span></li>
+        <li><img src="assets/games/witcher3.jpg" alt="巫师 3 封面" loading="lazy"><span>巫师 3</span></li>
+        <li><img src="assets/games/bg3.jpg" alt="博德之门 3 封面" loading="lazy"><span>Baldur's Gate 3</span></li>
+        <li><img src="assets/games/ghost.jpg" alt="对马岛之魂 封面" loading="lazy"><span>对马岛之魂</span></li>
+        <li><img src="assets/games/death-stranding.jpg" alt="死亡搁浅 封面" loading="lazy"><span>死亡搁浅</span></li>
+        <li><img src="assets/games/cyberpunk.jpg" alt="赛博朋克 2077 封面" loading="lazy"><span>Cyberpunk 2077</span></li>
+        <li><img src="assets/games/gta5.jpg" alt="GTA5 封面" loading="lazy"><span>GTA 5</span></li>
+        <li><img src="assets/games/civ6.jpg" alt="文明 6 封面" loading="lazy"><span>文明 VI</span></li>
+        <li><img src="assets/games/ac6.jpg" alt="装甲核心 6 封面" loading="lazy"><span>装甲核心 6</span></li>
+        <li><img src="assets/games/gt7.svg" alt="GT 赛车 7 封面" loading="lazy"><span>Gran Turismo 7</span></li>
+        <li><img src="assets/games/mk8.svg" alt="马力欧卡丁车 8 封面" loading="lazy"><span>马力欧卡丁车 8</span></li>
+        <li><img src="assets/games/splatoon3.svg" alt="斯普拉遁 3 封面" loading="lazy"><span>斯普拉遁 3</span></li>
+        <li><img src="assets/games/smash.svg" alt="任天堂明星大乱斗 特别版 封面" loading="lazy"><span>大乱斗 SP</span></li>
+      </ul>
+      <div class="player__extra reveal">
+        <p class="chips__label mono">also.into</p>
+        <ul class="player__extra-list">
+          <li><strong>机械键盘</strong><span>HHKB 静电容，敲代码与写文档的节奏设备</span></li>
+          <li><strong>胶片摄影</strong><span>取景与对焦，训练信息筛选的克制</span></li>
+          <li><strong>游戏设计方法论</strong><span>规则、反馈与系统边界如何塑造行为</span></li>
+        </ul>
       </div>
     </section>
 
-    <section class="section contact" id="contact">
-      <div class="contact__panel reveal">
+    <!-- ======================= CONTACT ======================= -->
+    <section class="section" id="contact">
+      <div class="contact reveal">
         <div>
-          <p class="terminal-label">ssh contact@soulferryman</p>
-          <h2>一起构建开发者生态</h2>
-          <p>如果你正在做 AI、具身智能、开源基础设施或开发者社区，我很乐意聊聊怎么让技术真正抵达使用者。</p>
+          <p class="tag mono">ssh contact@soulferryman</p>
+          <h2>一起构建开放的开发者生态</h2>
+          <p class="contact__lede">如果你正在做 AI、具身智能、开源基础设施或开发者社区，欢迎通过 GitHub 或工作邮箱交流。</p>
         </div>
         <div class="contact__actions">
-          <a class="btn btn--primary" href="mailto:dongjianyu1994@outlook.com">Email</a>
-          <a class="btn btn--ghost" href="https://github.com/soulferryman" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a class="btn btn--primary" href="https://github.com/soulferryman" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+            GitHub
+          </a>
+          <a class="btn btn--ghost" href="mailto:elijah.dong@x-humanoid.com">工作邮箱</a>
         </div>
       </div>
     </section>
   </main>
 
-  <script src="js/app.js?v=3.0"></script>
+  <footer class="footer mono">
+    <span>© <span id="year">2026</span> soulferryman · 董建宇</span>
+    <span>static build · no tracking · <a href="https://github.com/soulferryman/soulferryman.github.io" target="_blank" rel="noopener noreferrer">view source</a></span>
+  </footer>
+
+  <script src="js/app.js?v=4.1"></script>
 </body>
 </html>
