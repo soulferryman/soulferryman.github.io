@@ -509,6 +509,11 @@ body {
   transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
+.games img.games__boxart {
+  object-fit: contain;
+  background: var(--bg);
+}
+
 .games li:hover img {
   transform: translateY(-5px) scale(1.02);
   border-color: var(--accent);
