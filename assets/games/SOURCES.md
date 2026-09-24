@@ -10,3 +10,6 @@ These cover images identify games shown in the Player Profile. Cover art and tra
 | `splatoon3.jpg` | Splatoon 3 | [StrategyWiki file page](https://strategywiki.org/wiki/File:Splatoon_3_Box_Art.jpg) |
 | `smash.jpg` | Super Smash Bros. Ultimate | [Wikipedia file page](https://en.wikipedia.org/wiki/File:Super_Smash_Bros._Ultimate.jpg) |
 | `gt7.jpg` | Gran Turismo 7 (PS5 physical cover) | [MobyGames cover page](https://www.mobygames.com/game/180080/gran-turismo-7/covers/) |
+| `space-marine2.jpg` | Warhammer 40,000: Space Marine 2 (PS5 physical cover) | [Games4u product page](https://games4u.pk/products/warhammer-40-000-space-marine-2-ps5-game) |
+| `dynasty-origins.jpg` | Dynasty Warriors: Origins (PS5 physical cover) | [Video Games Plus product page](https://videogamesplus.ca/products/dynasty-warriors-origins-playstation-5-pre-order) |
+| `last-of-us-complete.jpg` | The Last of Us Complete (PS5 collection cover) | [Consogame product page](https://consogame.com/games/playstation-5/the-last-of-us-complete-ps5) |
